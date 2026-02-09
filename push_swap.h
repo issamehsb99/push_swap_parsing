@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
+/*   Updated: 2026/02/08 19:45:08 by ihasbi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <limits.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+#include <stdio.h>
+#include<limits.h>
+
+typedef struct s_list
+{
+	int             number;
+	struct s_list   *next;
+}   t_list;
+char	*ft_strjoin(char *s1, char *s2);
+int is_dup(t_list *a, long n);
+int is_sorted(int	*array, int ac);
+char	*ft_strdup(const char *s);
+int is_digit(char *s);
+t_list  *parssing(int ac , char **av);
+void free_split(char **split);
+int	is_number(char *s);
+void exit_error_leak(int *array, t_list *stack, char ** numbers);
+void exit_error(void);
+long	ft_atol(const char *str);
+long	ft_atol_leak(const char *str, int * array, t_list *a, char **numbers);
+int ft_strlen(char *s);
+void free_stack(t_list **a);
+char	**ft_split(char *s, char c);
+int is_espace_and_empty(char *split);
+size_t	count_words(char const *s, char c);
+int is_valide(char *s);
+int check_sign(char *s);
+int all_is_okey(int ac , char **av);
+int arr_len(char **av);
+char **arrgs_union(int ac , char **av);
+void push_value(t_list **new, long n);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, int value);
+int *push_array(char **numbers, int ac, t_list *a);
+// void    exit_error_numbre(int *array);
+char	*ft_strdup(const char *s);
+#endif
