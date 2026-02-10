@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 13:53:36 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/09 12:51:42 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/09 18:44:48 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ t_list  *parssing(int ac , char **av)
 {
     int i;
     t_list *a;
-    int j;
     int    *array;
 
     a = NULL;
@@ -24,7 +23,6 @@ t_list  *parssing(int ac , char **av)
         exit_error();
     char **numbers;
     numbers = arrgs_union(ac, av);
-    j = 0;
     i = arr_len(numbers);
     array = push_array(numbers, i, a);
     if (is_sorted(array, i) == 1)

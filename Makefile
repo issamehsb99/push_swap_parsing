@@ -12,7 +12,8 @@ SRC = \
 	push_to_stack.c \
 	pars_utils.c\
 	strjoin.c\
-	free.c
+	free.c\
+	stack.c
 
 OBJ = $(SRC:.c=.o)
 
