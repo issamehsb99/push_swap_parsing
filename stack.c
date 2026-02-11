@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 static int	get_indexing(t_list *a, int number)
 {
-	int	min = 0;
+	int	min;
 
+	min = 0;
 	while (a)
 	{
 		if (number > a->number)
-            min++;
+			min++;
 		a = a->next;
 	}
 	return (min);
@@ -35,4 +36,3 @@ void	index_stack(t_list *a)
 		tmp = tmp->next;
 	}
 }
-

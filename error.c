@@ -12,45 +12,44 @@
 
 #include "push_swap.h"
 
-void exit_error(void)
+void	exit_error(void)
 {
-    write(2,"Error\n",6);
-    exit(1);
+	write(2, "Error\n", 6);
+	exit(1);
 }
-int ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-    int i;
-    
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 
-int is_digit(char *s)
+int	is_digit(char *s)
 {
-    int i;
-    i =0;
-    while(s[i])
-    {
-        if (s[i]== ' ' || s[i] =='-' || s[i]== '+')
-            i++;
-        else if (s[i]<='9' && s[i]>='0')
-            i++;
-        else
-            return(0);
-    }
-    return(1);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == ' ' || s[i] == '-' || s[i] == '+')
+			i++;
+		else if (s[i] <= '9' && s[i] >= '0')
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }
-void exit_error_leak(int *array, t_list *stack, char **numbers)
+void	exit_error_leak(int *array, t_list *stack, char **numbers)
 {
-    free(array);
-    if (stack)
-        free_stack(&stack);
-    if (numbers)
-        free_split(numbers);
-    write(2, "Error\n", 6);
-    exit(1);
+	free(array);
+	if (stack)
+		free_stack(&stack);
+	if (numbers)
+		free_split(numbers);
+	write(2, "Error\n", 6);
+	exit(1);
 }
-
-

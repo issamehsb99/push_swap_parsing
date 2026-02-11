@@ -20,10 +20,10 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	new = malloc (sizeof(char) * (ft_strlen((char *)s2)
-				+ ft_strlen((char *)s1) + 1));
+	new = malloc(sizeof(char) * (ft_strlen((char *)s2) + ft_strlen((char *)s1)
+				+ 1));
 	if (!new)
-		return ( NULL);
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{
@@ -37,7 +37,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		j++;
 	}
 	new[i + j] = '\0';
-	return (free(s1),new);
+	return (free(s1), new);
 }
 
 char	*ft_strdup(const char *s)
@@ -63,10 +63,9 @@ char	*ft_strdup(const char *s)
 }
 void	ft_lstadd_front(t_list **lst, int value)
 {
-	t_list *new;
+	t_list	*new;
 
 	new = malloc(sizeof(t_list));
-
 	if (!new)
 		return ;
 	new->next = *lst;

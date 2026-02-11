@@ -37,16 +37,15 @@ long	ft_atol(const char *str)
 	}
 	return (n * sign);
 }
-long	ft_atol_leak(const char *str, int * array, t_list *a, char **numbers)
+long	ft_atol_leak(const char *str, int *array, t_list *a, char **numbers)
 {
 	size_t	i;
-	long		sign;
+	long	sign;
 	long	n;
 
 	n = 0;
 	sign = 1;
 	i = 0;
-
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')

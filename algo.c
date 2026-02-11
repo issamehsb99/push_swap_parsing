@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 static int	ft_lstsize(t_list *lst)
 {
@@ -28,33 +28,31 @@ static int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-void radix_sort(t_list **a, t_list **b)
+void	radix_sort(t_list **a, t_list **b)
 {
-    int i;
-    int j;
-    int size;
-    int max_bits;
+	int	i;
+	int	j;
+	int	size;
+	int	max_bits;
 
-    size = ft_lstsize(*a);
-    max_bits = 0;
-    while (((size - 1) >> max_bits) != 0)
-        max_bits++;
-
-    j = 0;
-    while (j < max_bits)
-    {
-        i = 0;
-        while (i < size)
-        {
-            if (((*a)->index >> j) & 1)
-                ra(a);
-            else
-                pb(a, b);
-            i++;
-        }
-        while (*b)
-            pa(a, b);
-        j++;
-    }
+	size = ft_lstsize(*a);
+	max_bits = 0;
+	while (((size - 1) >> max_bits) != 0)
+		max_bits++;
+	j = 0;
+	while (j < max_bits)
+	{
+		i = 0;
+		while (i < size)
+		{
+			if (((*a)->index >> j) & 1)
+				ra(a);
+			else
+				pb(a, b);
+			i++;
+		}
+		while (*b)
+			pa(a, b);
+		j++;
+	}
 }
-

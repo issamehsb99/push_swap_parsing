@@ -10,58 +10,58 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
-void sa(t_list **a)
+void	sa(t_list **a)
 {
-    t_list *first;
-    t_list *second;
-    
-    first = *a;
-    second = first->next;
-    first->next = second->next;
-    second->next = first;
-    *a = second;
-    write(1,"sa\n", 3);
+	t_list	*first;
+	t_list	*second;
+
+	first = *a;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*a = second;
+	write(1, "sa\n", 3);
 }
 
-void sb(t_list **b)
+void	sb(t_list **b)
 {
-    t_list *first;
-    t_list *second;
+	t_list	*first;
+	t_list	*second;
 
-    first = *b;
-    second = first->next;
-    first->next = second->next;
-    second->next= first;
-    *a = second;
-    write(1,"sb\n", 3);
+	first = *b;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*a = second;
+	write(1, "sb\n", 3);
 }
-static void sa_for_ss(t_list **a)
+static void	sa_for_ss(t_list **a)
 {
-    t_list *first;
-    t_list *second;
-    
-    first = *a;
-    second = first->next;
-    first->next = second->next;
-    second->next = first;
-    *a = second;
-}
-static void sb_for_ss(t_list **b)
-{
-    t_list *first;
-    t_list *second;
+	t_list	*first;
+	t_list	*second;
 
-    first = *b;
-    second = first->next;
-    first->next = second->next;
-    second->next= first;
-    *a = second;
+	first = *a;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*a = second;
 }
-void ss(t_list **a, t_list **b)
+static void	sb_for_ss(t_list **b)
 {
-    sa_for_ss(a);
-    sb_for_ss(b);
-    write(1, "ss\n", 3);
+	t_list	*first;
+	t_list	*second;
+
+	first = *b;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*a = second;
+}
+void	ss(t_list **a, t_list **b)
+{
+	sa_for_ss(a);
+	sb_for_ss(b);
+	write(1, "ss\n", 3);
 }
