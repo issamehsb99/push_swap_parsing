@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:01:47 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/09 13:06:38 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 11:06:52 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ long	ft_atol(const char *str)
 	n = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')
@@ -48,8 +46,7 @@ long	ft_atol_leak(const char *str, int * array, t_list *a, char **numbers)
 	n = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
+
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')

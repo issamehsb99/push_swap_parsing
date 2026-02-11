@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 22:26:06 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 09:52:37 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 14:08:37 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 int main(int ac , char *av[])
 {
     t_list *a;
-    t_list *tmp;
+    t_list *b;
     
     if (ac == 1)
-        exit(0);
-    a = parssing(ac, av);
-    index_stack(a);
-    while(a)
-    {
-        printf("\n %d ====a", a->number);
-        tmp = a->next;
-        free(a);
-        a = tmp;
-    }
+        return (0);
 
-    
+    a = parssing(ac, av);
+    b = NULL;
+
+    index_stack(a);
+
+    radix_sort(&a, &b);
+    return (0);
 }
+

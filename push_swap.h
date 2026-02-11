@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 21:26:18 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 11:47:15 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void pa(t_list **a, t_list **b);
 void rb(t_list **a);
 void rr(t_list **a, t_list **b);
 
-
+void radix_sort(t_list **a, t_list **b);
 void helper(char **numbers, int *array, t_list *a, int i);
 void pb(t_list **a, t_list **b);
 void	index_stack(t_list *a);
@@ -57,7 +57,6 @@ long	ft_atol_leak(const char *str, int * array, t_list *a, char **numbers);
 int ft_strlen(char *s);
 void free_stack(t_list **a);
 char	**ft_split(char *s, char c);
-int is_espace_and_empty(char *split);
 size_t	count_words(char const *s, char c);
 int is_valide(char *s);
 int all_is_okey(int ac , char **av);

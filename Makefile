@@ -16,7 +16,7 @@ SRC = \
 	stack.c\
 	operation2.c\
 	operation3.c\
-	operation4.c 
+	operation4.c algo.c
 
 OBJ = $(SRC:.c=.o)
 
