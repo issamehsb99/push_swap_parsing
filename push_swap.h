@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 11:47:15 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:38:01 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
-# include <limits.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

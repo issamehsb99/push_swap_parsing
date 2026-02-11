@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 18:33:02 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/08 19:04:43 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:38:40 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	free_split(char **split)
 	}
 	free(split);
 }
+
 void	free_stack(t_list **stack)
 {
 	t_list	*tmp;

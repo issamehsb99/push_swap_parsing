@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 11:53:23 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 12:30:01 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:40:08 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	sb(t_list **b)
 	*a = second;
 	write(1, "sb\n", 3);
 }
+
 static void	sa_for_ss(t_list **a)
 {
 	t_list	*first;
@@ -48,6 +49,7 @@ static void	sa_for_ss(t_list **a)
 	second->next = first;
 	*a = second;
 }
+
 static void	sb_for_ss(t_list **b)
 {
 	t_list	*first;
@@ -59,6 +61,7 @@ static void	sb_for_ss(t_list **b)
 	second->next = first;
 	*a = second;
 }
+
 void	ss(t_list **a, t_list **b)
 {
 	sa_for_ss(a);

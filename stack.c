@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 13:07:53 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 11:46:53 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:41:15 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static int	get_indexing(t_list *a, int number)
 	}
 	return (min);
 }
+
 void	index_stack(t_list *a)
 {
 	t_list	*tmp;

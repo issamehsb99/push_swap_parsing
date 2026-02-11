@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 11:50:32 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 14:01:28 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:40:56 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
 void	radix_sort(t_list **a, t_list **b)
 {
 	int	i;

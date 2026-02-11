@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 18:35:17 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/08 18:37:54 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:41:29 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	arr_len(char **av)
 	}
 	return (j);
 }
+
 char	**arrgs_union(int ac, char **av)
 {
 	int		i;

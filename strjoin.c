@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:00:51 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/08 17:03:34 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:41:06 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_strdup(const char *s)
 	nov[i] = '\0';
 	return (nov);
 }
+
 void	ft_lstadd_front(t_list **lst, int value)
 {
 	t_list	*new;

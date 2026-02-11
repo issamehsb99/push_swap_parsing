@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 21:03:06 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 21:14:54 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/11 15:40:44 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	rrb(t_list **a)
 	*a = tmp2;
 	write(1, "rrb\n", 4);
 }
+
 static void	rra_for_rrr(t_list **a)
 {
 	t_list	*tmp;
@@ -76,6 +77,7 @@ static void	rrb_for_rrr(t_list **a)
 	tmp2->next = *a;
 	*a = tmp2;
 }
+
 void	rrr(t_list **a, t_list **b)
 {
 	rra_for_rrr(a);
