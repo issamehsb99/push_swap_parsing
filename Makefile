@@ -13,7 +13,10 @@ SRC = \
 	pars_utils.c\
 	strjoin.c\
 	free.c\
-	stack.c
+	stack.c\
+	operation2.c\
+	operation3.c\
+	operation4.c 
 
 OBJ = $(SRC:.c=.o)
 

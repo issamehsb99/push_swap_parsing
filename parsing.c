@@ -6,46 +6,66 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 13:53:36 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/09 18:44:48 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/10 21:36:12 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list  *parssing(int ac , char **av)
+static char **init_numbers(int ac, char **av)
 {
-    int i;
-    t_list *a;
-    int    *array;
-
-    a = NULL;
     if (!all_is_okey(ac, av))
         exit_error();
-    char **numbers;
-    numbers = arrgs_union(ac, av);
-    i = arr_len(numbers);
-    array = push_array(numbers, i, a);
-    if (is_sorted(array, i) == 1)
+    return (arrgs_union(ac, av));
+}
+
+static int *handle_sorted(char **numbers, int len)
+{
+    int *array;
+
+    array = push_array(numbers, len, NULL);
+    if (is_sorted(array, len))
     {
         free_split(numbers);
         free(array);
         exit(0);
     }
- 
-    i = i -1 ;
-    while (i >= 0)
+    return (array);
+}
+
+static t_list *fill_stack(char **numbers, int *array, int len)
+{
+    t_list *a;
+    long    value;
+
+    a = NULL;
+    while (--len >= 0)
     {
-        if(is_dup(a,ft_atol_leak(numbers[i], array, a, numbers)) == 1)
+        value = ft_atol_leak(numbers[len], array, a, numbers);
+        if (is_dup(a, value))
         {
             free(array);
             free_stack(&a);
             free_split(numbers);
             exit_error();
         }
-        ft_lstadd_front(&a, ft_atol_leak(numbers[i], array, a, numbers));
-        i--;
+        ft_lstadd_front(&a, value);
     }
-    free(array);
+    return (a);
+}
+
+t_list *parssing(int ac, char **av)
+{
+    char    **numbers;
+    int     *array;
+    int     len;
+    t_list  *a;
+
+    numbers = init_numbers(ac, av);
+    len = arr_len(numbers);
+    array = handle_sorted(numbers, len);
+    a = fill_stack(numbers, array, len);
     free_split(numbers);
-    return(a);
+    free(array);
+    return (a);
 }

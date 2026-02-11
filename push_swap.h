@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 11:46:35 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/10 21:26:18 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,21 @@ typedef struct s_list
 	int	index;
 	struct s_list   *next;
 }   t_list;
+void ra(t_list **a);
+void rra(t_list **a);
+void rrr(t_list **a, t_list **b);
+void rrb(t_list **a);
+void ss(t_list **a, t_list **b);
+void sb(t_list **b);
+void sa(t_list **a);
+void pb(t_list **a, t_list **b);
+void pa(t_list **a, t_list **b);
+void rb(t_list **a);
+void rr(t_list **a, t_list **b);
 
+
+void helper(char **numbers, int *array, t_list *a, int i);
+void pb(t_list **a, t_list **b);
 void	index_stack(t_list *a);
 char	*ft_strjoin(char *s1, char *s2);
 int is_dup(t_list *a, long n);
