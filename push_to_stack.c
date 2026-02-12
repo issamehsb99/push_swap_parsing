@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/05 17:48:06 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/12 10:27:46 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 15:13:57 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	*push_array(char **numbers, int ac, t_list *a)
 	int	i;
 	int	*array;
 
-	array = malloc(sizeof(int) * ac - 1);
+	array = malloc(sizeof(int) * ac + 1);
 	if (!array)
 	{
 		free_split(numbers);

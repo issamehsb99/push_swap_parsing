@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 22:26:06 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 15:37:44 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 16:29:32 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int ac, char *av[])
 	a = parssing(ac, av);
 	b = NULL;
 	index_stack(a);
+	handl_it(&a, &b, ft_lstsize(a));
 	radix_sort(&a, &b);
-	free_stack(&a);
-	return (0);
+	return (free_stack(&a), 0);
 }

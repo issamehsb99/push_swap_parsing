@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/12 10:24:48 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 16:27:26 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ void				ss(t_list **a, t_list **b);
 void				sb(t_list **b);
 void				sa(t_list **a);
 void				pb(t_list **a, t_list **b);
-void				pa(t_list **a, t_list **b);
+void				pa(t_list **b, t_list **a);
 void				rb(t_list **a);
 void				rr(t_list **a, t_list **b);
 
+void				sort_five(t_list **a, t_list **b);
+void				sort_four(t_list **a, t_list **b);
 void				radix_sort(t_list **a, t_list **b);
-void				helper(char **numbers, int *array, t_list *a, int i);
 void				pb(t_list **a, t_list **b);
 void				index_stack(t_list *a);
 char				*ft_strjoin(char *s1, char *s2);
@@ -59,8 +60,12 @@ int					is_valide(char *s);
 int					all_is_okey(int ac, char **av);
 int					arr_len(char **av);
 char				**arrgs_union(int ac, char **av);
-void				ft_lstadd_front(t_list **lst, int value, char **numbers, int *array);
+void				ft_lstadd_front(t_list **lst, int value,
+						char **numbers, int *array);
 int					*push_array(char **numbers, int ac, t_list *a);
 char				*ft_strdup(const char *s);
 void				exit_error_free(char *s);
+void				sort_three(t_list **stack);
+int					ft_lstsize(t_list *lst);
+void				handl_it(t_list **a, t_list **b, int i);
 #endif

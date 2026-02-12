@@ -6,13 +6,13 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 12:30:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 12:29:26 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 13:26:26 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_list **a, t_list **b)
+void	pa(t_list **b, t_list **a)
 {
 	t_list	*tmp;
 

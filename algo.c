@@ -6,13 +6,13 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 11:50:32 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 15:40:56 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 15:00:31 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	t_list	*tmp;
 	int		i;
@@ -53,7 +53,7 @@ void	radix_sort(t_list **a, t_list **b)
 			i++;
 		}
 		while (*b)
-			pa(a, b);
+			pa(b, a);
 		j++;
 	}
 }
