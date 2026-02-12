@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 13:53:36 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/10 21:36:12 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 10:22:38 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static t_list	*fill_stack(char **numbers, int *array, int len)
 			free_split(numbers);
 			exit_error();
 		}
-		ft_lstadd_front(&a, value);
+		ft_lstadd_front(&a, value, numbers, array);
 	}
 	return (a);
 }

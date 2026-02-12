@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 17:29:08 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 15:38:36 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 09:57:38 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	exit_error(void)
 {
+	write(2, "Error\n", 6);
+	exit(1);
+}
+
+void	exit_error_free(char *s)
+{
+	free(s);
 	write(2, "Error\n", 6);
 	exit(1);
 }

@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:01:21 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 15:38:01 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 10:24:48 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ t_list				*parssing(int ac, char **av);
 void				free_split(char **split);
 void				exit_error_leak(int *array, t_list *stack, char **numbers);
 void				exit_error(void);
-long				ft_atol(const char *str);
 long				ft_atol_leak(const char *str, int *array, t_list *a,
 						char **numbers);
 int					ft_strlen(char *s);
@@ -60,7 +59,8 @@ int					is_valide(char *s);
 int					all_is_okey(int ac, char **av);
 int					arr_len(char **av);
 char				**arrgs_union(int ac, char **av);
-void				ft_lstadd_front(t_list **lst, int value);
+void				ft_lstadd_front(t_list **lst, int value, char **numbers, int *array);
 int					*push_array(char **numbers, int ac, t_list *a);
 char				*ft_strdup(const char *s);
+void				exit_error_free(char *s);
 #endif

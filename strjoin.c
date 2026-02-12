@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:00:51 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/11 15:41:06 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 10:26:38 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	new = malloc(sizeof(char) * (ft_strlen((char *)s2) + ft_strlen((char *)s1)
 				+ 1));
 	if (!new)
-		return (NULL);
+		exit_error_free(s1);
 	i = 0;
 	while (s1[i])
 	{
@@ -50,7 +50,7 @@ char	*ft_strdup(const char *s)
 	nov = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!nov)
 	{
-		return (NULL);
+		exit_error();
 	}
 	i = 0;
 	while (s[i])
@@ -62,13 +62,13 @@ char	*ft_strdup(const char *s)
 	return (nov);
 }
 
-void	ft_lstadd_front(t_list **lst, int value)
+void	ft_lstadd_front(t_list **lst, int value, char **numbers, int *array)
 {
 	t_list	*new;
 
 	new = malloc(sizeof(t_list));
 	if (!new)
-		return ;
+		exit_error_leak(array, *lst, numbers);
 	new->next = *lst;
 	new->number = value;
 	*lst = new;

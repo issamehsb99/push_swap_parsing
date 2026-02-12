@@ -6,7 +6,7 @@
 /*   By: ihasbi <ihasbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:23:32 by ihasbi            #+#    #+#             */
-/*   Updated: 2026/02/08 17:00:17 by ihasbi           ###   ########.fr       */
+/*   Updated: 2026/02/12 10:10:02 by ihasbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ char	**ft_split(char *s, char c)
 	num_ofw = count_words(s, c);
 	tab = malloc(sizeof(char *) * (num_ofw + 1));
 	if (!tab)
-		return (NULL);
+		exit_error_free(s);
 	if (!set_mem(tab, s, c))
-		return (NULL);
+		exit_error_free(s);
 	free(s);
 	return (tab);
 }
